@@ -1,0 +1,23 @@
+{
+  "name": "sueh-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "NhutNguyen236",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.2",
+    "nodemailer-handlebars": "^1.0.1",
+    "nodemon": "^2.0.11"
+  }
+}
