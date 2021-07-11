@@ -9477,7 +9477,7 @@ label:not(.input-group-text) {
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
   max-height: 0;
-  transition: max-height 0.15s ease-out;
+  transition: max-height 0.75s ease-in;
   overflow: hidden;
 }
 
@@ -9517,11 +9517,19 @@ hr{
 
 .container_foto:hover article {
   max-height: 500px;
-  transition: max-height 0.5s ease-in;
+  transition: max-height 0.75s ease-in;
 
 }
+
 .staff-img{
   height: 500px;
   width:350px;
+}
+.imgAbout{
+  box-shadow: 0 0 8px 8px white inset;
+  border-radius: 5px;
+}
+.textAbout{
+  font-weight: 500;
 }
 
