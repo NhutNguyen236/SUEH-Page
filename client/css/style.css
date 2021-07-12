@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
 /*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -8331,6 +8336,7 @@ textarea.form-control {
     font-size: 18px;
     font-weight: 400; }
   .ftco-footer .ftco-footer-widget ul li a span {
+    align-items: center;
     color: #fff; }
   .ftco-footer .ftco-footer-widget .btn-primary {
     background: #fff !important;
@@ -8656,7 +8662,7 @@ textarea.form-control {
     vertical-align: top; }
   .block-23 ul li .icon {
     width: 40px;
-    font-size: 18px;
+    font-size: 32px;
     padding-top: 2px;
     color: white; }
 
@@ -9538,5 +9544,15 @@ hr{
 .nav-item:hover {
     color: #167ce9;
   
+}
+@media screen and (max-width: 768px){
+  iframe{
+    width: 480px;
+  }
+}
+@media screen and (max-width: 480px){
+  iframe{
+    width: 320px;
+  }
 }
 
