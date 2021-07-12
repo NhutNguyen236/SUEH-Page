@@ -15,12 +15,18 @@ dotenv.config({ path: __dirname + '/config/.env' });
 app.use(express.static(path.resolve(__dirname, './client')));
 
 //============== MIDDLEWARES CONFIG ================
+// Index route
 app.get('/', (req, res) => {
-    res.redirect('/sueh_trangchu')
+    res.redirect('/index')
 })
 
-app.get('/sueh_trangchu', (req, res) => {
-    res.sendFile(__dirname + './client/index.html')
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/client/index.html')
+})
+
+// Register route
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + '/client/contact.html')
 })
 
 
