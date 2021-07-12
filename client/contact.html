@@ -25,6 +25,18 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+	integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	crossorigin=""></script>
+
+  <!-- Import JBox -->
+  <link rel="stylesheet" href="./vendor/JBox/jBox.all.css">
   </head>
   <body>
     
@@ -142,12 +154,12 @@
 					<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mong muốn được mentor để?"></textarea>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Đăng ký" class="btn btn-primary py-3 px-5">
+					<input id="register-button" type="submit" value="Đăng ký" class="btn btn-primary py-3 px-5">
 				</div>
             </form>
           
           </div>
-
+		  <!--Map placeholder-->
           <div class="col-md-6" id="map"></div>
         </div>
       </div>
@@ -274,9 +286,10 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="js/google-map.js"></script> -->
   <script src="js/main.js"></script>
-    
+  <script src="./vendor/JBox/jBox.all.js"></script>
+  <script src="./js/form_check.js"></script>
   </body>
 </html>
