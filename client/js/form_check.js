@@ -114,29 +114,29 @@ jQuery('#register-button').on('click', function(event) {
 
     // Validate fullname
     if(fullname.length <= 0 || fullname == null){
-        create_error('⚠️ Vui lòng nhập đầy đủ họ tên nhé')
+        create_error(`<p>⚠️ Vui lòng nhập đầy đủ <span style="color: yellow;"><strong>HỌ TÊN</strong></span> nhé</p>`)
         $('#fullname').focus()
     }
 
     // Validate college
     else if(college.length <= 0 || college == null){
-        create_error('⚠️ Vui lòng điền thông tin trường')
+        create_error(`<p>⚠️ Vui lòng nhập thông tin <span style="color: yellow;"><strong>TRƯỜNG</strong></span> nhé</p>`)
         $('#college').focus()
     }
     
     // Validate major
     else if(major.length <= 0 || major == null){
-        create_error('⚠️ Vui lòng điền thông tin ngành học')
+        create_error(`<p>⚠️ Vui lòng nhập thông tin <span style="color: yellow;"><strong>NGÀNH HỌC</strong></span> nhé</p>`)
         $('#major').focus()
     }
     
     // Validate phone number
     else if(phone.length <= 0 || phone == null){
-        create_error('⚠️ Vui lòng nhập số điện thoại')
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI</strong></span> nhé</p>`)
         $('#phone').focus()
     }
-    else if(phone.length < 10 || phone.match(/^[0-9a-zA-Z]+$/)){
-        create_error('⚠️ Vui lòng nhập số điện thoại hợp lệ')
+    else if(phone.length < 10 || ){
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI HỢP LỆ</strong></span> nhé</p>`)
         $('#phone').focus()
     }
 });
