@@ -9639,7 +9639,7 @@ display: flex;
     right: 0;
     bottom: 0;
     background: rgb(205,65,122);
-    background: radial-gradient(circle, rgba(205,65,122,0.6951155462184874) 2%, rgba(20,106,189,0.4822303921568627) 61%);
+    background: radial-gradient(circle, rgba(205,65,122,0.4150035014005602) 2%, rgba(20,106,189,0.3925945378151261) 61%);
     z-index: -1;
     transform: scale(0.2, 0.8);
     opacity: 0;
