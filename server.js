@@ -29,6 +29,24 @@ app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/client/contact.html')
 })
 
+// Huỳnh Anh mentor page route
+app.get('/phan_huynh_anh', (req, res) => {
+    // res.sendFile(__dirname + '/client/contact.html')
+    res.end('Trang cua thay Phan Huynh Anh')
+})
+
+// Thìn Thọ  mentor page route
+app.get('/van_thin_tho', (req, res) => {
+    // res.sendFile(__dirname + '/client/contact.html')
+    res.end('Trang cua thay Phan Van Thin Tho')
+})
+
+// Huỳnh Anh mentor page route
+app.get('/nguyen_chi_thanh', (req, res) => {
+    // res.sendFile(__dirname + '/client/contact.html')
+    res.end('Trang cua thay Nguyen Chi thanh')
+})
+
 
 // app.post('/sendMail', (req, res) => {
 //     var messageBody = {
