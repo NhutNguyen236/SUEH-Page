@@ -301,7 +301,7 @@
 
 	$('#appointment_time').timepicker();
 
-
-
-
 })(jQuery);
+
+//============================== Cẩm nang pop up ====================//
+

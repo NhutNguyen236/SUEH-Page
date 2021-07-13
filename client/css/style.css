@@ -7800,7 +7800,8 @@ h1, h2, h3, h4, h5,
     background: -o-linear-gradient(left, #6a00ff 0%, #ffd900 100%);
     background: -ms-linear-gradient(left, #6a00ff 0%, #ffd900 100%);
     background: -webkit-gradient(linear, left top, right top, from(#6a00ff), to(#ffd900));
-    background: linear-gradient(to right, #6a00ff 0%, #ffd900 100%);
+    background: rgb(20,106,189);
+    background: radial-gradient(circle, rgba(20,106,189,0.6643032212885154) 39%, rgba(205,65,122,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a00ff', endColorstr='#ffd900', GradientType=1 ); }
 
 .about-video h2 {

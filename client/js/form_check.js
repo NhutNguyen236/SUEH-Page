@@ -135,7 +135,7 @@ jQuery('#register-button').on('click', function(event) {
         create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI</strong></span> nhé</p>`)
         $('#phone').focus()
     }
-    else if(phone.length < 10 || ){
+    else if(phone.length < 10){
         create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI HỢP LỆ</strong></span> nhé</p>`)
         $('#phone').focus()
     }
