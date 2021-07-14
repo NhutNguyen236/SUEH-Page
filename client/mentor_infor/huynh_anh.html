@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Material Cards | jQuery Plugin Demo</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/Material Card/dist/material-cards-auto-height.css">
+</head>
+<body>
+    <div class="grid-item">
+        <article class="material-card Red">
+            <h2>
+                <span>Phan Huỳnh Anh</span>
+                <strong>
+                    <i class="fa fa-fw fa-star"></i>
+                    Tiến sĩ, Viện trưởng
+                </strong>
+            </h2>
+            <div class="mc-content">
+                <div class="img-container">
+                    <img class="img-responsive" src="https://f20-zpg.zdn.vn/5737111926052409226/4c0e240948bcbce2e5ad.jpg">
+                </div>
+                <div class="mc-description">
+                    <ul>
+                        <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).</li>
+                        <li>Nghiên cứu, khai thác và phát triển dự án.</li>
+                        <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
+                        <li>Đào tạo, tư vấn và hướng nghiệp cho sinh viên, thanh niên.</li>
+                        <li>Chuyên gia, giảng viên đào tạo đội nhóm và truyền thông nội bộ.</li>
+                    </ul>
+                    <h4>
+                        <a>Xem chi tiết</a> 
+                    </h4>
+                </div>
+            </div>
+            <a class="mc-btn-action">
+                <i class="fa fa-bars"></i>
+            </a>
+        </article>
+    </div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../vendor/Material Card/js/jquery.material-cards.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script>
+    $(function() {
+
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 390,
+        });
+
+        $('.material-card').materialCard();
+
+        $('.material-card').on('shown.material-card hidden.material-card', function (event) {
+            $grid.masonry();
+        });
+
+    });
+</script>
+</body>
+</html>

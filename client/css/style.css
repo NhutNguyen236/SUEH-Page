@@ -9617,10 +9617,6 @@ flex-direction: column;
 align-items: center;
 gap: 1em;
 }
-.back .streaming-info {
-    columns: 2;
-    column-rule: 1px solid rgba(255, 255, 255, 0.6);
-}
 .back .game-stat {
 font-size: 1.2rem;
 text-align: center;
@@ -9704,4 +9700,3 @@ transition: 250ms ease-in-out;
     opacity: 1;
 }
 }
-    
