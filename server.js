@@ -13,6 +13,7 @@ dotenv.config({ path: __dirname + '/config/.env' });
 
 //=============== VIEW CONFIG ======================
 app.use(express.static(path.resolve(__dirname, './client')));
+app.set('view engine','ejs')
 
 //============== MIDDLEWARES CONFIG ================
 // Index route
@@ -32,19 +33,19 @@ app.get('/register', (req, res) => {
 // Huỳnh Anh mentor page route
 app.get('/phan_huynh_anh', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
-    res.end('Trang cua thay Phan Huynh Anh')
+    res.render('teacher-single', {mentor_img: './images/mentor_1.jpg', mentor_name: 'Phan Huỳnh Anh', mentor_position: 'Tiến sĩ'})
 })
 
 // Thìn Thọ  mentor page route
 app.get('/van_thin_tho', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
-    res.end('Trang cua thay Phan Van Thin Tho')
+    res.render('teacher-single', {mentor_img: './images/mentor_2.jpg', mentor_name: 'Phan Văn Thìn Thọ', mentor_position: 'Thạc sĩ'})
 })
 
 // Huỳnh Anh mentor page route
 app.get('/nguyen_chi_thanh', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
-    res.end('Trang cua thay Nguyen Chi thanh')
+    res.render('teacher-single', {mentor_img: './images/mentor_3.jpg', mentor_name: 'Nguyễn Chí Thành', mentor_position: 'Tiến sĩ'})
 })
 
 

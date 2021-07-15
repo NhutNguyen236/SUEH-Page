@@ -17,6 +17,10 @@ function create_error(content){
             open: 'tada',
             close: 'zoomIn'
         },
+        position: {
+            x: 'left',
+            y: 'top'
+        },
     });
 }
 
