@@ -19672,8 +19672,12 @@ transition: 250ms ease-in-out;
 }
 
 .testimonial2 .testi2 .image-thumb img {
-  width: 400px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #6dc6d6;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 .testimonial2 .testi2 .owl-dots {
