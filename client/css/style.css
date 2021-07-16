@@ -451,7 +451,7 @@ pre {
     word-break: normal; }
 
 .pre-scrollable {
-  max-height: 340px;
+  max-height: 100%;
   overflow-y: scroll; 
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -6174,7 +6174,7 @@ button.bg-dark:focus {
 
 .mb-4,
 .my-4 {
-  margin-bottom: 1.5rem !important; }
+  margin-bottom: 0rem !important; }
 
 .ml-4,
 .mx-4 {
@@ -6297,17 +6297,17 @@ button.bg-dark:focus {
 .p-5 {
   padding: 3rem !important; }
 
-.pt-5,
+/* .pt-5,
 .py-5 {
-  padding-top: 3rem !important; }
+  padding-top: 3rem !important; } */
 
 .pr-5,
 .px-5 {
   padding-right: 3rem !important; }
 
-.pb-5,
+/* .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important; }
+  padding-bottom: 3rem !important; } */
 
 .pl-5,
 .px-5 {
@@ -7783,7 +7783,7 @@ h1, h2, h3, h4, h5,
   margin-bottom: 20px; }
 
 .ftco-section-3 {
-  padding: 8em 0;
+  padding: 2em 0;
   position: relative; }
   .ftco-section-3 .overlay {
     position: absolute;
@@ -8298,21 +8298,25 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
-  position: relative; }
-  @media (max-width: 767.98px) {
+    padding: 7em 0;
+    position: relative; }
+@media (max-width: 767.98px){
     .ftco-section {
-      padding: 6em 0; } }
-  @media (min-width: 768px) {
+        padding: 6em 0; 
+    } 
+}
+@media (min-width: 768px){
     .ftco-section .container-fluid {
-      padding: 0 4em; } }
+        padding: 0 4em; 
+    } 
+}
 
 .ftco-bg-dark {
   background: #3c312e; }
 
 .ftco-footer {
   font-size: 16px;
-  padding: 8em 0 8em 0; }
+  padding: 8em 0 2em 0; }
   .ftco-footer .overlay {
     position: absolute;
     top: 0;
@@ -8502,7 +8506,7 @@ textarea.form-control {
     margin: 0; }
   .testimony-section .owl-carousel .owl-stage-outer {
     padding-bottom: 2em;
-    padding-top: 4em;
+    /* padding-top: 4em; */
     position: relative; }
 
 .testimony-wrap {
@@ -9705,8 +9709,7 @@ transition: 250ms ease-in-out;
 @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800);
 .testimonial2 {
     font-family: "Montserrat", sans-serif;
-    color: rgb(205,65,122);
-    color: radial-gradient(circle, rgba(205,65,122,0.4150035014005602) 2%, rgba(20,106,189,0.3925945378151261) 61%);
+    color: rgb(43, 109, 214);
     font-weight: 300;
 }
 
@@ -9798,6 +9801,7 @@ transition: 250ms ease-in-out;
     background: #ff4d7e !important;
     border: 1px solid #ff4d7e !important;
 }
+/**************************END OF cẩm nang section********************************/
 
 /* Dự án section styling start */
 .project_slider .item {
@@ -9866,5 +9870,17 @@ transition: 250ms ease-in-out;
     position: absolute;
     margin-top: 300px;
   }
+
+  #six-rules, .register-button:hover{
+    color: rgb(14, 57, 125);
+  }
+  #seven-rules:hover{
+    color: rgb(14, 57, 125);
+  }
   
 /* Dự án section styling end */
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
