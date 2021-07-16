@@ -1,4 +1,4 @@
- AOS.init({
+AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
@@ -349,19 +349,44 @@ $(function() {
 });
 
 //============================== Dự án slider =======================//
-$(function() {
-
-	$('.owl-1').owlCarousel({
-
-        loop:true,
-        margin:0,
-        nav:true,
-        items: 1,
-        dots: false,
-        smartSpeed: 1000,
-        autoplay: true,
-        autoplayHoverPause: true,
-        navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
-    })
-	
+$('.owl-carousel').owlCarousel({
+    stagePadding: 200,
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    lazyLoad: true,
+    nav:true,
+    dots: false,
+    autoplay: true,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding: 60
+        },
+        600:{
+            items:1,
+            stagePadding: 100
+        },
+        1000:{
+            items:1,
+            stagePadding: 200
+        },
+        1200:{
+            items:1,
+            stagePadding: 250
+        },
+        1400:{
+            items:1,
+            stagePadding: 300
+        },
+        1600:{
+            items:1,
+            stagePadding: 350
+        },
+        1800:{
+            items:1,
+            stagePadding: 190
+        }
+    }
 })
