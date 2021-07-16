@@ -304,7 +304,7 @@ AOS.init({
 
 })(jQuery);
 
-//============================== Cẩm nang section ====================//
+//============================== START Cẩm nang section ====================//
 $('.testi2').owlCarousel({
     loop: true,
     margin: 20,
@@ -340,15 +340,15 @@ $(function() {
     $('.testi2 .owl-dot').each(function() {
         grab = jQuery(this).data('info');
         slidegrab = $('.slidenumber' + grab + ' img').attr('src');
-        console.log(slidegrab);
         $(this).css("background-image", "url(" + slidegrab + ")");
     });
     // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
     // TO MAKE IT ALL NEAT 
 
 });
+//============================== END Cẩm nang section =================================================//
 
-//============================== Dự án slider =======================//
+//============================== START Dự án slider =======================//
 $('.owl-carousel').owlCarousel({
     stagePadding: 200,
     loop:true,
@@ -390,3 +390,9 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+// Create image box for dự án section
+new jBox('Image', {
+});
+
+//============================== END Dự án slider =======================//
