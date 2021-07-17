@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./vendor/bootstrap-335-iso.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./vendor/Material Card/dist/material-cards-auto-height.css">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -114,7 +115,6 @@
                             <h2>
                                 <span style="color: white;">Phan Huỳnh Anh</span>
                                 <strong>
-                                    <i class="fa fa-fw fa-star"></i>
                                     Tiến sĩ
                                 </strong>
                             </h2>
@@ -148,7 +148,6 @@
                             <h2>
                                 <span style="color: white;">Phan Văn Thìn Thọ</span>
                                 <strong>
-                                    <i class="fa fa-fw fa-star"></i>
                                     Thạc sĩ
                                 </strong>
                             </h2>
@@ -181,7 +180,6 @@
                         <h2>
                             <span style="color: white;">Nguyễn Chí Thành</span>
                             <strong>
-                                <i class="fa fa-fw fa-star"></i>
                                 Tiến sĩ
                             </strong>
                         </h2>
@@ -449,73 +447,95 @@
                 </div>
 
                 <div class="row">
-                    <div class="testimonial2 py-5">
-                        <div class="container">
-                            <div class="owl-carousel owl-theme testi2 mt-4">
-                                <div class="item">
-                                <div class="row position-relative">
-                                    <div class="col-lg-6 col-md-6 align-self-center">
-                                        <a href="/register"><button class="btn btn-danger register-button">Đăng ký!</button></a>
-                                        <h4 class="my-3">Yêu cầu tham gia</h4>
-                                        <p>
-                                            <ul>
+                    <style type="text/css">
+                        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+                        body {
+                            font-family: 'Roboto', sans-serif;
+                        }
+                        .box-100{
+                            transition:all 0.3s ease;
+                            cursor:pointer;
+                            box-shadow: 0px 0px 2px 6px rgba(0,0,0,0.03);
+                            width: 100px;
+                            height: 100px;
+                            color:#fff;
+                            background-color: #2695f0;
+                            border-radius: 100px;        
+                        }
+                        .box-100 i{
+                        font-size:26px;    
+                        }
+                        .box-100:hover{
+                        box-shadow: 0px 0px 5px 8px rgba(0,0,0,0.08);
+                        }
+                        .box-100:hover i{
+                        opacity:0.5;
+                        }
+                        .cc {
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                        }
+                        .cc:hover {
+                            box-shadow: 0px 0px 32px 2px rgba(0,0,0,0.06);
+                        }
+                        .btn {
+                            padding: 14px 26px;
+                            font-weight: 700;
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                        }
+                    </style>
+                    <div class="container py-5">
+                        <div class="row py-5">
+                            <div class="col-12 text-center">
+                                <div class="row pt-3">
+                                    <div class="col-lg-4 col-md-6 vv">
+                                        <div class="p-4 border-light border rounded cc">
+                                            <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto"> 
+                                                <i class="lni lni-apartment"></i>
+                                            </div>
+                                            <h5 class="mb-3 mt-5">Yêu cầu</h5>
+                                            <ul class="mb-4 text-muted" style="text-align: left;">
                                                 <li>Có tinh thần học hỏi</li>
                                                 <li>Sẵn sàng dấn thân</li>
                                                 <li>Có trách nhiệm khi tham gia, hoàn thành các công việc được giao</li>
                                                 <li>Phải có bài định vị bản thân</li>
                                                 <li>Phải hoàn thành phần phỏng vấn</li>
                                             </ul>
-                                        </p>
-                                        
-                                        <h5 class="mt-4">Chu Thị Thanh Loan</h5>
-                                        <!-- <a href="#"><h6 class="subtitle font-weight-normal">Xem chi tiết...</h6></a> -->
+                                            <!-- <a href="/register" class="btn btn-light btn-lg mt-3">Đăng ký &rarr;</a> -->
+                                        </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 image-thumb d-none d-md-block">
-                                    <img src="./images/camnang_1.jpg" alt="wrapkit" class="rounded-circle img-fluid" />
+                                    <div class="col-lg-4 col-md-6 vv">
+                                        <div class="p-4 border-light border rounded cc">
+                                            <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto"> <i class="lni lni-calculator"></i>
+                                            </div>
+                                            <h5 class="mb-3 mt-5">Quyền lợi</h5>
+                                            <ul class="mb-4 text-muted" style="text-align: left;">
+                                                <li>Cơ hội trải nghiệm và làm việc ở các dự án thực tế.</li>
+                                                <li>Được mentor các kỹ năng cần thiết cho công việc như quản lý thời gian, viết CV, thuyết trình,... từ ban cố vấn và những anh chị có kinh nghiệm.</li>
+                                                <li>Mở rộng mối quan hệ.</li>
+                                                <li>Nhận giấy chứng nhận hoàn thành nhiệm vụ.</li>
+                                            </ul>
+                                            <a href="/register" class="btn btn-danger btn-lg mt-3">Đăng ký &rarr;</a>
+                                        </div>
                                     </div>
-                                </div>
-                                </div>
-                                <div class="item">
-                                <div class="row position-relative">
-                                    <div class="col-lg-6 col-md-6 align-self-center">
-                                        <a href="/register"><button class="btn btn-danger register-button">Đăng ký!</button></a>
-                                        <h4 class="my-3">Quyền lợi khi tham gia</h4>
-                                        <ul>
-                                            <li>Cơ hội trải nghiệm và làm việc ở các dự án thực tế.</li>
-                                            <li>Được mentor các kỹ năng cần thiết cho công việc như quản lý thời gian, viết CV, thuyết trình,... từ ban cố vấn và những anh chị có kinh nghiệm.</li>
-                                            <li>Mở rộng mối quan hệ.</li>
-                                            <li>Nhận giấy chứng nhận hoàn thành nhiệm vụ.</li>
-                                        </ul>
-                                        <h5 class="mt-4">Lưu Anh Tuấn</h5>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 image-thumb d-none d-md-block">
-                                        <img src="./images/camnang_2.jpg" alt="wrapkit" class="rounded-circle img-fluid" />
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row position-relative">
-                                    <div class="col-lg-6 col-md-6 align-self-center">
-                                        <a href="/register"><button class="btn btn-danger register-button">Đăng ký!</button></a>
-                                        <h4 class="my-3">Nội quy</h4>
-                                        <ul>
-                                            <li>
-                                                <button id="six-rules" class="btn btn-danger">6 nguyên tắc văn hóa</button>
-                                            </li>
-                                            <li style="margin-top: 10px;">
-                                                <button id="seven-rules" class="btn btn-danger">7 hành vi lãnh đạo</button>
-                                            </li>
-                                        </ul>
-                                        <h5 class="mt-4"></h5>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 image-thumb d-none d-md-block">
-                                        <img src="./images/noiquy.jpg" alt="wrapkit" class="rounded-circle img-fluid" />
-                                    </div>
+                                    <div class="col-lg-4 col-md-6 vv">
+                                        <div class="p-4 border-light border rounded cc">
+                                            <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto"> <i class="lni lni-bar-chart"></i>
+                                            </div>
+                                            <h5 class="mb-3 mt-5">Nội quy</h5>
+                                            <!-- <p class="mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  -->
+                                            <p class="btn btn-primary" id="six-rules" name="Sự kiện">6 quy tắc văn hóa</p>
+                                            <p class="btn btn-primary" id="seven-rules" name="Sự kiện">7 nguyên tắc lãnh đạo</p>
+                                            <!-- <a href="/register" class="btn btn-light btn-lg mt-3">Đăng ký &rarr;</a> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -536,7 +556,7 @@
     					<div class="text p-4">
     						<h3 class="mb-3"><a href="#">Sự kiện</a></h3>
     						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-    						<p><a id="hire-action" class="btn btn-primary">Hire us now!</a></p>
+    						<p class="btn btn-primary" id="hire-action" name="Sự kiện">Hire us now!</p>
     					</div>
     				</div>
     			</div>
@@ -546,7 +566,7 @@
     					<div class="text p-4">
     						<h3 class="mb-3"><a href="#">Dịch thuật</a></h3>
     						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-    						<p><a href="#" class="btn btn-primary">Hire us now!</a></p>
+    						<p class="btn btn-primary" id="hire-action" name="Dịch thuật">Hire us now!</p>
     					</div>
     				</div>
     			</div>
@@ -556,7 +576,7 @@
     					<div class="text p-4">
     						<h3 class="mb-3"><a href="#">Thiết kế</a></h3>
     						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-    						<p><a href="#" class="btn btn-primary">Hire us now!</a></p>
+    						<p class="btn btn-primary" id="hire-action" name="Thiết kế">Hire us now!</p>
     					</div>
     				</div>
     			</div>
@@ -622,7 +642,7 @@
 				<div class="col-md-7">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4991292105296!2d106.68713911534756!3d10.773031562200945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ca6a7386b%3A0xd0e8c31c849624f!2zNjcgTmd1eeG7hW4gVGjhu4sgTWluaCBLaGFpLCBQaMaw4budbmcgUGjhuqFtIE5nxakgTMOjbywgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1625991924057!5m2!1sen!2s"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+						width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy">
 					</iframe> 
 				</div>
 			</div>

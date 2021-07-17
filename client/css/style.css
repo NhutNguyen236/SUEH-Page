@@ -486,9 +486,9 @@ pre {
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap; 
   margin-right: -15px;
   margin-left: -15px; }
 
@@ -3189,6 +3189,13 @@ input[type="button"].btn-block {
     text-decoration: none; }
   .nav-link.disabled {
     color: #6c757d; }
+
+/* Nhut add responsive for nav-link when screen */
+@media only screen and (min-width: 992px) and (max-width: 1119px){
+    .nav-link{
+        padding-right: 0px;
+    }
+}
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6; }
@@ -9545,11 +9552,30 @@ hr{
     color: #167ce9;
   
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1070px){
+    iframe{
+      width: 480px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    iframe{
+      width: 480px;
+    }
+}
+
+@media screen and (max-width: 900px){
   iframe{
     width: 480px;
   }
 }
+
+@media screen and (max-width: 860px){
+    iframe{
+      max-width: 100%;
+    }
+}
+
 @media screen and (max-width: 480px){
   iframe{
     width: 320px;
@@ -9784,10 +9810,17 @@ transition: 250ms ease-in-out;
   opacity: 1;
 }
 
-@media (max-width: 767px) {
+/*Responsive for cẩm nang carousel*/
+@media screen and (max-width: 767px) {
   .testimonial2 .testi2 .owl-dots {
     top: 0px;
   }
+}
+
+@media screen and (max-width: 540px) {
+    .testimonial2 .testi2 .owl-dots {
+      top: 0px;
+    }
 }
 
 .testimonial2 .btn-md {
@@ -9870,13 +9903,6 @@ transition: 250ms ease-in-out;
     position: absolute;
     margin-top: 300px;
   }
-
-  #six-rules, .register-button:hover{
-    color: rgb(14, 57, 125);
-  }
-  #seven-rules:hover{
-    color: rgb(14, 57, 125);
-  }
   
 /* Dự án section styling end */
 .clearfix:after{
@@ -9885,7 +9911,7 @@ transition: 250ms ease-in-out;
     clear: both;
 }
 
-/***********************Hire action pop up styling ***************************/
+/***********************START Hire action pop up styling ***************************/
 /* Restyle jBoxes */
 
 #jBoxLogin .jBox-content {
@@ -9897,6 +9923,8 @@ transition: 250ms ease-in-out;
     line-height: 1.6;
     padding: 15px 0;
     font-size: 20px;
+    color: white;
+    background-color:rgb(43, 109, 214);
   }
   
   .jBox-TooltipSmall.LoginTooltipSmall .jBox-content,
@@ -10090,4 +10118,4 @@ transition: 250ms ease-in-out;
   .login-footer span:hover {
     text-decoration: underline;
   }
-  
+/***********************END Hire action pop up styling ***************************/  

@@ -33,7 +33,9 @@ app.get('/register', (req, res) => {
 // Huỳnh Anh mentor page route
 app.get('/phan_huynh_anh', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
-    res.render('teacher-single', {mentor_img: './images/mentor_1.jpg', mentor_name: 'Phan Huỳnh Anh', mentor_position: 'Tiến sĩ'})
+    res.render('teacher-single', {
+        mentor_img: './images/mentor_1.jpg', mentor_name: 'Phan Huỳnh Anh', mentor_position: 'Tiến sĩ'
+    })
 })
 
 // Thìn Thọ  mentor page route
