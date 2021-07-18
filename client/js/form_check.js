@@ -118,30 +118,48 @@ jQuery('#register-button').on('click', function(event) {
 
     // Validate fullname
     if(fullname.length <= 0 || fullname == null){
-        create_error(`<p>⚠️ Vui lòng nhập đầy đủ <span style="color: yellow;"><strong>HỌ TÊN</strong></span> nhé</p>`)
+        create_error(`<p>⚠️ Vui lòng nhập đầy đủ <span style="color: yellow;"><strong>HỌ TÊN</strong></span></p>`)
         $('#fullname').focus()
     }
 
     // Validate college
     else if(college.length <= 0 || college == null){
-        create_error(`<p>⚠️ Vui lòng nhập thông tin <span style="color: yellow;"><strong>TRƯỜNG</strong></span> nhé</p>`)
+        create_error(`<p>⚠️ Vui lòng nhập thông tin <span style="color: yellow;"><strong>TRƯỜNG</strong></span></p>`)
         $('#college').focus()
     }
     
     // Validate major
     else if(major.length <= 0 || major == null){
-        create_error(`<p>⚠️ Vui lòng nhập thông tin <span style="color: yellow;"><strong>NGÀNH HỌC</strong></span> nhé</p>`)
+        create_error(`<p>⚠️ Vui lòng nhập thông tin <span style="color: yellow;"><strong>NGÀNH HỌC</strong></span></p>`)
         $('#major').focus()
     }
     
     // Validate phone number
     else if(phone.length <= 0 || phone == null){
-        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI</strong></span> nhé</p>`)
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI</strong></span></p>`)
         $('#phone').focus()
     }
-    else if(phone.length < 10){
-        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI HỢP LỆ</strong></span> nhé</p>`)
+    else if(!phone.match(/^\d{10}$/)){
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>SỐ ĐIỆN THOẠI HỢP LỆ</strong></span></p>`)
         $('#phone').focus()
     }
+
+    // Validate email
+    else if(email.length <= 0 || email == null){
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>EMAIL</strong></span></p>`)
+        $('#email').focus()
+    }
+    else if(!email.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)){
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>EMAIL HỢP LỆ</strong></span></p>`)
+        $('#email').focus()
+    }
+
+    // Validate message
+    else if(message.length <= 0 || message == null){
+        create_error(`<p>⚠️ Vui lòng nhập <span style="color: yellow;"><strong>LỜI NHẮN</strong></span></p>`)
+        $('#message').focus()
+    }
+    
+
 });
 

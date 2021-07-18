@@ -45,7 +45,7 @@ app.get('/phan_huynh_anh', (req, res) => {
         </ul>
         `,
         mentor_timeline:`
-        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15F4RHRPBZQila-XmEEHNNZgOVb27rBw-ykzVvtYaC2s&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15F4RHRPBZQila-XmEEHNNZgOVb27rBw-ykzVvtYaC2s&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' loading="lazy"></iframe>
         `
     })
 })
