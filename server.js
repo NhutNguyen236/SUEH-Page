@@ -34,20 +34,52 @@ app.get('/register', (req, res) => {
 app.get('/phan_huynh_anh', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
     res.render('teacher-single', {
-        mentor_img: './images/mentor_1.jpg', mentor_name: 'Phan Huỳnh Anh', mentor_position: 'Tiến sĩ'
+        mentor_img: './images/mentor_1.jpg', mentor_name: 'Phan Huỳnh Anh', mentor_position: 'Tiến sĩ - Viện trưởng',
+        mentor_desc: `
+        <ul>
+            <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).</li>
+            <li>Nghiên cứu, khai thác và phát triển dự án.</li>
+            <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
+            <li>Đào tạo, tư vấn và hướng nghiệp cho sinh viên, thanh niên.</li>
+            <li>Chuyên gia, giảng viên đào tạo đội nhóm và truyền thông nội bộ</li>
+        </ul>
+        `,
+        mentor_timeline:`
+        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15F4RHRPBZQila-XmEEHNNZgOVb27rBw-ykzVvtYaC2s&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+        `
     })
 })
 
 // Thìn Thọ  mentor page route
 app.get('/van_thin_tho', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
-    res.render('teacher-single', {mentor_img: './images/mentor_2.jpg', mentor_name: 'Phan Văn Thìn Thọ', mentor_position: 'Thạc sĩ'})
+    res.render('teacher-single', {
+        mentor_img: './images/mentor_2.jpg', mentor_name: 'Phan Văn Thìn Thọ', mentor_position: 'Thạc sĩ',
+        mentor_desc: `
+        <ul>
+            <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).
+            <li>Nghiên cứu, khai thác và phát triển dự án.</li>
+            <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
+            <li>Đào tạo, tư vấn và hướng nghiệp cho sinh viên, thanh niên.</li>
+            <li>Chuyên gia, giảng viên đào tạo đội nhóm và truyền thông nội bộ</li>
+        </ul>
+        `
+    })
 })
 
 // Huỳnh Anh mentor page route
 app.get('/nguyen_chi_thanh', (req, res) => {
     // res.sendFile(__dirname + '/client/contact.html')
-    res.render('teacher-single', {mentor_img: './images/mentor_3.jpg', mentor_name: 'Nguyễn Chí Thành', mentor_position: 'Tiến sĩ'})
+    res.render('teacher-single', {
+        mentor_img: './images/mentor_3.jpg', mentor_name: 'Nguyễn Chí Thành', mentor_position: 'Tiến sĩ',
+        mentor_desc: `
+        <ul>
+            <li>Là người sáng lập ra SMentor đồng thời cũng là một chuyên gia đào tạo và truyền cảm hứng cho các doanh nghiệp tại Việt Nam. Với khát vọng chung tay cùng với Quý thầy cô, Doanh nhân và Đội ngũ chuyên gia nhằm phát hiện, nuôi dưỡng các thế hệ thanh niên sao cho có đủ tài đủ đức phụng sự cho cộng đồng doanh nghiệp, góp phần cho sự phồn vinh của đất nước.</li>
+            <li>Nhờ kinh nghiệm gần 20 năm trong nhiều lĩnh vực sản xuất kinh doanh tại các doanh nghiệp lớn nhỏ trong nước và nước ngoài, nhờ sự chỉ bảo của các tiền bối thành đạt cùng với các tổ chức nâng đỡ như Hội Đồng Khởi Nghiệp Quốc Gia (VCCI), Câu Lạc Bộ Sales & Marketing (CSMO), Hiệp Hội Các Nhà Bán Lẻ Việt Nam (AVR), Câu Lạc Bộ Du Lịch Vừa & Nhỏ (VT) đã giúp cho Anh hội đủ các điều kiện thuận lợi trong bước đường thực hiện khát vọng cháy bỏng của mình.</li>
+            <li>Bên cạnh đó, Anh còn nhận được sự ủng hộ và quý mến của tập thể Cán bộ CNV của Tập đoàn VNPT trên khắp cả nước đã góp phần rất lớn cho việc triển khai ý chí Smentor trong thời gian tới. Anh quan niệm rằng cuộc sống cần học cách cho đi và cho thật nhiều để có được nhiều “duyên” vốn là thành tố quan trọng trong mọi hoạt động trong đời sống và công việc. Đến với Smentor là đến với môi</li>
+        </ul>
+        `
+    })
 })
 
 
