@@ -64,7 +64,7 @@ AOS.init({
 
 	var carousel = function() {
 		$('.carousel-testimony').owlCarousel({
-			autoplay: true,
+			autoplay: false,
             dots: false,
 			loop: true,
 			items:1,
