@@ -5,8 +5,6 @@ const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-handlebars');
 var dotenv = require('dotenv')
 var path = require('path')
-var https = require('https')
-var fs = require('fs')
 
 //=============== APP CONFIG ======================
 var app = express()
@@ -169,12 +167,6 @@ const options = {
 
 //================= SERVER LISTENER ================
 
-// var server = app.listen(process.env.PORT || 8080, () => {
-//     console.log('http://localhost:8080')
-// })
-
-const server = https.createServer(options, app) 
-
-server.listen(process.env.PORT || 8080, () => {
+var server = app.listen(process.env.PORT || 8080, () => {
     console.log('http://localhost:8080')
 })
