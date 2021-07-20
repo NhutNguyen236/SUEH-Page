@@ -8477,8 +8477,8 @@ textarea.form-control {
   margin-bottom: 10px; }
 
 .heading-section h2 {
-  font-size: 30px;
-  font-weight: 400; }
+  font-size: 50px;
+  font-weight: 500; }
   @media (max-width: 767.98px) {
     .heading-section h2 {
       font-size: 28px; } }
