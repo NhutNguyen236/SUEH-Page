@@ -173,6 +173,8 @@ const options = {
 //     console.log('http://localhost:8080')
 // })
 
-https.createServer(options, function (req, res) {
-    res.writeHead(200);
-}).listen(8000);
+const server = https.createServer(options, app) 
+
+server.listen(process.env.PORT || 8080, () => {
+    console.log('http://localhost:8080')
+})
