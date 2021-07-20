@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-handlebars');
 var dotenv = require('dotenv')
 var path = require('path')
+var https = require('https')
 
 //=============== APP CONFIG ======================
 var app = express()
@@ -159,8 +160,18 @@ app.get('/nguyen_chi_thanh', (req, res) => {
 
 // })
 
+// Setup SSL cert
+const options = {
+    key: fs.readFileSync('./cert/key.pem'),
+    cert: fs.readFileSync('./cert/cert.pem')
+};
+
 //================= SERVER LISTENER ================
 
-var server = app.listen(process.env.PORT || 8080, () => {
-    console.log('http://localhost:8080')
-})
+// var server = app.listen(process.env.PORT || 8080, () => {
+//     console.log('http://localhost:8080')
+// })
+
+https.createServer(options, function (req, res) {
+    res.writeHead(200);
+}).listen(8000);
