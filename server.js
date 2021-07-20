@@ -5,13 +5,9 @@ const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-handlebars');
 var dotenv = require('dotenv')
 var path = require('path')
-var https = require('https')
-var fs = require('fs')
-var sslRedirect = require('heroku-ssl-redirect');
 
 //=============== APP CONFIG ======================
 var app = express()
-app.use(sslRedirect());
 app.use(bodyParser.urlencoded({ extended: true }))
 dotenv.config({ path: __dirname + '/config/.env' });
 
@@ -163,20 +159,8 @@ app.get('/nguyen_chi_thanh', (req, res) => {
 
 // })
 
-// Setup SSL cert
-const options = {
-    key: fs.readFileSync('./cert/key.pem'),
-    cert: fs.readFileSync('./cert/cert.pem')
-};
-
 //================= SERVER LISTENER ================
 
-// var server = app.listen(process.env.PORT || 8080, () => {
-//     console.log('http://localhost:8080')
-// })
-
-const server = https.createServer(options, app) 
-
-server.listen(process.env.PORT || 8080, () => {
+var server = app.listen(process.env.PORT || 8080, () => {
     console.log('http://localhost:8080')
 })
