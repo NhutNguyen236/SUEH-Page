@@ -6,6 +6,7 @@ const hbs = require('nodemailer-handlebars');
 var dotenv = require('dotenv')
 var path = require('path')
 var https = require('https')
+var fs = require('fs')
 
 //=============== APP CONFIG ======================
 var app = express()
