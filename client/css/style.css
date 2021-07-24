@@ -463,6 +463,7 @@ pre {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
+
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
@@ -8305,7 +8306,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-    padding: 7em 0;
+    padding: 4em 0;
     position: relative; }
 @media (max-width: 767.98px){
     .ftco-section {
@@ -8503,11 +8504,16 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-position: center center; }
 
-@media (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
   .img-about {
     height: 400px;
     margin-bottom: 30px; } }
 
+@media screen and (max-width: 991px) {
+    .img-about {
+        height: 400px;
+        margin-bottom: 30px; } }
+        
 .testimony-section {
   position: relative; }
   .testimony-section .owl-carousel {
@@ -10120,3 +10126,4 @@ transition: 250ms ease-in-out;
     text-decoration: underline;
   }
 /***********************END Hire action pop up styling ***************************/  
+

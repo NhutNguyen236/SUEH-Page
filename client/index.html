@@ -27,7 +27,6 @@
 	<link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive_style.css">
     <!-- Import JBox -->
     <link rel="stylesheet" href="./vendor/JBox/jBox.all.css">
     <!--Import Material Card-->
@@ -35,6 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./vendor/Material Card/dist/material-cards-auto-height.css">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -66,25 +66,89 @@
 	</nav>
 	<!-- END nav -->
 
-	<div class="hero-wrap" style="background-image: url('./images/bg_1.jpg'); background-attachment:fixed;">
-        <!-- <video autoplay muted loop id="myVideo">
-            <source src="./assets/intro.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video> -->
+	<div class="hero-wrap" style="background-image: url('./images/sueh_intro.gif'); background-attachment: fixed; background-size: auto; background-position: center center;">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center"
 				data-scrollax-parent="true">
 				<div class="col-md-8 ftco-animate text-center">
-					<h1 class="mb-4">Hãy đến với S.UEH để có những trải nghiệm chưa từng có</h1>
 					<p>
-						<a href="/register" class="btn btn-primary px-4 py-3 mt-4">Đăng ký ngay</a>
-						<!-- <a href="#" class="btn btn-secondary px-4 py-3">View Courses</a> -->
+						<a href="https://www.youtube.com/watch?v=iB2bLD2A_R4" class="btn btn-primary px-4 py-3 mt-4 popup-youtube">Xem video</a>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
+
+    <!-- <div class="hero-wrap" style="background-position: bottom;">
+        <style>
+            #videowrapper{  
+                position: relative;
+                overflow: hidden;
+                max-height: 100%;
+            } 
+
+            #fullScreenDiv{
+                min-height: 100%; 
+                height: 100vh;
+                width: 100vw;
+                padding:0;
+                margin: 0;
+                background-color: gray;
+                position: relative;
+            }
+
+            #video{    
+                width: 100vw; 
+                height: auto;
+                margin: auto;
+                display: flex;
+            }
+            @media (min-aspect-ratio: 16/9) {
+                #video{
+                    width: 100vw; 
+                    height:auto;
+                }
+            }
+
+            @media (max-aspect-ratio: 16/9) {
+                #video {
+                    height: 100vh; 
+                    width:auto;
+                    margin-left: 50vw;
+                    transform: translate(-50%);
+                }
+            }
+            #videoMessage{
+                width: 100%; 
+                height: 100%;
+                position: absolute; 
+                top: 0; 
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+        </style>
+        <div id="videowrapper">
+            <div id="fullScreenDiv">
+               <video id="video" role="presentation" preload="auto" playsinline="" crossorigin="anonymous" loop="" muted="" autoplay="" class="blur">
+                    <source src="./assets/intro1.mp4" type="video/mp4">
+                </video> 
+            </div>
+        </div>
+        <div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text align-items-center justify-content-center"
+				data-scrollax-parent="true">
+                <div id="videoMessage" class="styling"> 
+                    <p class="videoClick"><a href="#main">Xem chi tiết</a></p> 
+                </div>   
+			</div>
+		</div>
+	</div> -->
 
     <section class="ftco-section" id="about-section">
         <div class="overlay"></div>
@@ -93,7 +157,36 @@
     			<div class="col-md-6 d-flex ftco-animate">
     				<div class="img img-about align-self-stretch" style="background-image: url(https://b-f38-zpg.zdn.vn/809268469433844551/686ae072c522327c6b33.jpg); width: 100%; height: 410px;"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 ftco-animate" style="padding-top: 30px;">
+                <!-- Responsive to remove image when max-width size is 300px -->
+                <style>
+                    @media screen and (min-width: 768px) and (max-width: 991px){
+                        .img-about{
+                            display: none;
+                        }
+                    }
+
+                    @media screen and (max-width: 480px){
+                        .img-about{
+                            display: none;
+                        }
+                    }
+                </style>
+                <script>
+                    function myFunction(x) {
+                        if (x.matches) { // If media query matches
+                            $('#sueh_intro').removeClass('col-md-6')
+                            $('#sueh_intro').addClass('col-md-12')
+                        } else {
+                            $('#sueh_intro').removeClass('col-md-12')
+                            $('#sueh_intro').addClass('col-md-6')
+                        }
+                    }
+
+                    var x = window.matchMedia("screen and (min-width: 768px) and (max-width: 991px)")
+                    myFunction(x) // Call listener function at run time
+                    x.addListener(myFunction) // Attach listener function on state changes
+                </script>
+    			<div class="col-md-6 pl-md-5 ftco-animate" style="padding-top: 30px; padding-left: 1rem !important;" id="sueh_intro">
     				<h2 class="mb-4" style="padding-bottom: 20px;">Giới thiệu SUEH</h2>
                     <div style="text-align: justify; color: black;">
                         <p>Dưới sự dẫn dắt bởi Tiến sĩ Phan Huỳnh Anh – Người sáng lập nên Viện Bách Nghệ Thực Hành Việt Nam Smentor, cùng với đó là đội ngũ lớp Khởi nghiệp của trưởng Đại học Kinh Tế TPHCM.</p>
@@ -104,108 +197,6 @@
     		</div>
     	</div>
     </section>
-
-	<!-- Ban cố vấn section -->
-	<section class="ftco-section bg-light" id="mentor-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 heading-section ftco-animate text-center">
-					<h2 class="mb-4">Ban cố vấn</h2>
-				</div>
-			</div>
-
-			<div class="row bootstrap-iso">
-				<div class="col-lg-4 mb-sm-4 ftco-animate">
-                    <div class="bootstrap">
-                        <article class="material-card Blue">
-                            <h2>
-                                <span style="color: white;">Phan Huỳnh Anh</span>
-                                <strong>
-                                    Tiến sĩ
-                                </strong>
-                            </h2>
-                            <div class="mc-content">
-                                <div class="img-container">
-                                    <img class="img-responsive" src="./images//mentor_1.jpg">
-                                </div>
-                                <div class="mc-description">
-                                    <ul style="font-size: medium;">
-                                        <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).</li>
-                                        <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
-                                        <li>Chuyên gia, giảng viên đào tạo đội nhóm và truyền thông nội bộ.</li>
-                                    </ul>
-                                    <h4>
-                                        <a href="/phan_huynh_anh">Xem chi tiết</a> 
-                                    </h4>
-                                </div>
-                            </div>
-                            <a class="mc-btn-action">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </article>
-                    </div>
-				</div>
-                
-                <div class="col-lg-4 mb-sm-4 ftco-animate">
-                    <div class="bootstrap">
-                        <article class="material-card Blue">
-                            <h2>
-                                <span style="color: white;">Phan Văn Thìn Thọ</span>
-                                <strong>
-                                    Thạc sĩ
-                                </strong>
-                            </h2>
-                            <div class="mc-content">
-                                <div class="img-container">
-                                    <img class="img-responsive" src="./images//mentor_2.jpg">
-                                </div>
-                                <div class="mc-description">
-                                    <ul style="font-size: medium;">
-                                        <li>Phó viện trưởng</li>
-                                        <li>GĐ TT TN KIẾN TRÚC TƯƠNG TÁC</li>
-                                    <h4>
-                                        <a href="/van_thin_tho">Xem chi tiết</a> 
-                                    </h4>
-                                </div>
-                            </div>
-                            <a class="mc-btn-action">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </article>
-                    </div>
-				</div>
-				
-				<div class="col-lg-4 mb-sm-4 ftco-animate">
-					<article class="material-card Blue">
-                        <h2>
-                            <span style="color: white;">Nguyễn Chí Thành</span>
-                            <strong>
-                                Tiến sĩ
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="./images/mentor_3.jpg">
-                            </div>
-                            <div class="mc-description">
-                                <ul style="font-size: medium;">
-                                    <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).</li>
-                                    <li>Nghiên cứu, khai thác và phát triển dự án.</li>
-                                    <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
-                                </ul>
-                                <h4>
-                                    <a href="/nguyen_chi_thanh">Xem chi tiết</a> 
-                                </h4>
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </article>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- Thành viên section -->
 	<section class="ftco-section testimony-section" id="members-section">
@@ -390,6 +381,108 @@
 		</div>
 	</section>
 
+    <!-- Ban cố vấn section -->
+	<section class="ftco-section bg-light" id="mentor-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section ftco-animate text-center">
+					<h2 class="mb-4">Ban cố vấn</h2>
+				</div>
+			</div>
+
+			<div class="row bootstrap-iso">
+				<div class="col-lg-4 mb-sm-4 ftco-animate">
+                    <div class="bootstrap">
+                        <article class="material-card Blue">
+                            <h2>
+                                <span style="color: white;">Phan Huỳnh Anh</span>
+                                <strong>
+                                    Tiến sĩ
+                                </strong>
+                            </h2>
+                            <div class="mc-content">
+                                <div class="img-container">
+                                    <img class="img-responsive" src="./images//mentor_1.jpg">
+                                </div>
+                                <div class="mc-description">
+                                    <ul style="font-size: medium;">
+                                        <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).</li>
+                                        <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
+                                        <li>Chuyên gia, giảng viên đào tạo đội nhóm và truyền thông nội bộ.</li>
+                                    </ul>
+                                    <h4>
+                                        <a href="/phan_huynh_anh">Xem chi tiết</a> 
+                                    </h4>
+                                </div>
+                            </div>
+                            <a class="mc-btn-action">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </article>
+                    </div>
+				</div>
+                
+                <div class="col-lg-4 mb-sm-4 ftco-animate">
+                    <div class="bootstrap">
+                        <article class="material-card Blue">
+                            <h2>
+                                <span style="color: white;">Phan Văn Thìn Thọ</span>
+                                <strong>
+                                    Thạc sĩ
+                                </strong>
+                            </h2>
+                            <div class="mc-content">
+                                <div class="img-container">
+                                    <img class="img-responsive" src="./images//mentor_2.jpg">
+                                </div>
+                                <div class="mc-description">
+                                    <ul style="font-size: medium;">
+                                        <li>Phó viện trưởng</li>
+                                        <li>GĐ TT TN KIẾN TRÚC TƯƠNG TÁC</li>
+                                    <h4>
+                                        <a href="/van_thin_tho">Xem chi tiết</a> 
+                                    </h4>
+                                </div>
+                            </div>
+                            <a class="mc-btn-action">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </article>
+                    </div>
+				</div>
+				
+				<div class="col-lg-4 mb-sm-4 ftco-animate">
+					<article class="material-card Blue">
+                        <h2>
+                            <span style="color: white;">Nguyễn Chí Thành</span>
+                            <strong>
+                                Tiến sĩ
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="./images/mentor_3.jpg">
+                            </div>
+                            <div class="mc-description">
+                                <ul style="font-size: medium;">
+                                    <li>Chuyên gia xây dựng nhân sự kế thừa (Mentoring).</li>
+                                    <li>Nghiên cứu, khai thác và phát triển dự án.</li>
+                                    <li>Tư vấn giải pháp và triển khai Marketing Insight cho doanh nghiệp</li>
+                                </ul>
+                                <h4>
+                                    <a href="/nguyen_chi_thanh">Xem chi tiết</a> 
+                                </h4>
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </article>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Các dự án section-->
 	<section class="ftco-section bg-light" id="project-section">
 		<div class="container">
@@ -443,10 +536,10 @@
 
     <!--Cẩm nang secion-->
     <section class="ftco-section testimony-section" style="padding-bottom: 0em;" id="rule-section">
-        <div class="container">
+        <div class="container" style="">
             <div class="row justify-content-center mb-5 pb-3">
 
-                <div class="col-md-7 heading-section ftco-animate text-center">
+                <div class="col-md-7 heading-section ftco-animate text-center" style="margin-bottom: 2rem !important;">
                     <h2 class="mb-4">Cẩm nang</h2>
                 </div>
 
@@ -675,8 +768,6 @@
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 				stroke="#F96D00" /></svg></div>
 
-
-	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

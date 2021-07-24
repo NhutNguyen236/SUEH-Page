@@ -284,15 +284,37 @@ AOS.init({
     }
   });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+//   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+//     disableOn: 700,
+//     type: 'iframe',
+//     mainClass: 'mfp-fade',
+//     removalDelay: 160,
+//     preloader: false,
 
-    fixedContentPos: false
-  });
+//     fixedContentPos: true
+//   });
+
+  $('.popup-youtube').magnificPopup({
+    type: 'iframe',
+	mainClass: 'mfp-fade',
+	removalDelay: 400,
+	preloader: true,
+    fixedContentPos: true,
+	type: 'iframe',
+	iframe: {
+		markup: '<div class="mfp-iframe-scaler">' +
+			'<div class="mfp-close"></div>' +
+			'<iframe class="mfp-iframe" frameborder="0" allow="autoplay" allowfullscreen></iframe>' +
+			'</div>',
+		patterns: {
+			youtube: {
+				index: 'youtube.com/',
+				id: 'v=',
+				src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+			}
+		}
+	}
+  })
 
 
   $('#appointment_date').datepicker({
@@ -304,81 +326,15 @@ AOS.init({
 
 })(jQuery);
 
-//============================== START Cẩm nang section ====================//
-$('.testi2').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: false,
-    dots: true,
-    autoplay: false,
-    responsiveClass: true,
-    responsive: {
-        0: {
-            items: 1,
-            nav: false
-        },
-        400:{
-            items:1,
-        },
-        568:{
-            items:1,
-            nav: false,
-        },
-        600:{
-            items:1,
-        },
-        1000:{
-            items:1,
-        },
-        1200:{
-            items:1,
-        },
-        1400:{
-            items:1,
-        },
-        1600:{
-            items:1,
-        },
-        1800:{
-            items:1,
-        }
-    }
-});
-  
-$(function() {
-    // 1) ASSIGN EACH 'DOT' A NUMBER
-    dotcount = 1;
-    $('.testi2 .owl-dot').each(function() {
-        $(this).addClass('dotnumber' + dotcount);
-        $(this).attr('data-info', dotcount);
-        dotcount = dotcount + 1;
-    });
-    // 2) ASSIGN EACH 'SLIDE' A NUMBER
-    slidecount = 1;
-    $('.testi2 .owl-item').not('.cloned').each(function() {
-        $(this).addClass('slidenumber' + slidecount);
-        slidecount = slidecount + 1;
-    });
-    $('.testi2 .owl-dot').each(function() {
-        grab = jQuery(this).data('info');
-        slidegrab = $('.slidenumber' + grab + ' img').attr('src');
-        $(this).css("background-image", "url(" + slidegrab + ")");
-    });
-    // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
-    // TO MAKE IT ALL NEAT 
-
-});
-//============================== END Cẩm nang section =================================================//
-
 //============================== START Dự án slider =======================//
 $('.owl-carousel').owlCarousel({
     stagePadding: 200,
     loop:true,
     margin:10,
-    nav:false,
     items:1,
     lazyLoad: true,
     nav:true,
+    navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
     dots: false,
     autoplay: true,
     responsive:{
