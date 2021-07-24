@@ -44,8 +44,58 @@ app.get('/phan_huynh_anh', (req, res) => {
             <li>Chuyên gia, giảng viên đào tạo đội nhóm và truyền thông nội bộ</li>
         </ul>
         `,
-        mentor_timeline:`
-        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15F4RHRPBZQila-XmEEHNNZgOVb27rBw-ykzVvtYaC2s&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' loading="lazy"></iframe>
+        mentor_images:`
+        <style>
+                .swiper-container {
+                    width: 100%;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+                .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .swiper-slide img {
+                    display: block;
+                    width: 100%;
+                    height: -webkit-fill-available;
+                }
+            </style>
+            <div class="container" style="max-width: 90%;">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img id="hello" src="https://bit.ly/3y2rvha" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3eRhtbo" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3y3H5t3" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3x0nMPN" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3eU8BSi" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3x2Q6B6" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3eRWEfG" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://bit.ly/3eU91rQ" />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div
+            </div>
         `
     })
 })
