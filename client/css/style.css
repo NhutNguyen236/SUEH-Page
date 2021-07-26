@@ -7504,7 +7504,7 @@ h1, h2, h3, h4, h5,
     background: -webkit-gradient(linear, left top, right top, from(#6a00ff), to(#ffd900));
     /* background: linear-gradient(to right, #344feb 0%, #e31e1e 100%); */
     background: rgb(34,116,195);
-    background: radial-gradient(circle, rgba(34,116,195,0.9108018207282913) 17%, rgba(205,65,122,1) 100%);
+    background: radial-gradient(circle, rgba(34,116,195,0.9) 17%, rgba(205,65,122,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a00ff', endColorstr='#ffd900', GradientType=1 ); }
 
 .slider-text {
